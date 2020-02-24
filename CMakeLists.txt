@@ -12,8 +12,8 @@ find_package (Threads REQUIRED)
 configure_file(version.h.in "${CMAKE_CURRENT_SOURCE_DIR}/version.h")
 
 add_subdirectory(
-       "${CMAKE_CURRENT_SOURCE_DIR}/googletest"
-       googletest
+       "${CMAKE_CURRENT_SOURCE_DIR}/gtest"
+       gtest
 )
 
 add_executable(iptask main.cpp)
