@@ -13,7 +13,7 @@ configure_file(version.h.in "${CMAKE_CURRENT_SOURCE_DIR}/version.h")
 
 add_subdirectory(
        "${CMAKE_CURRENT_SOURCE_DIR}/googletest"
-       gtest
+       googletest
 )
 
 add_executable(iptask main.cpp)
@@ -48,8 +48,6 @@ target_link_libraries(test_version_g
     iptask.lib gtest_main
 )
 
-
-
 if (MSVC)
     target_compile_options(iptask PRIVATE
         /W4
@@ -76,9 +74,10 @@ else ()
     target_compile_options(test_version_g PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
+    target_compile_options(gtest PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
 endif()
-
-
 
 install(TARGETS iptask RUNTIME DESTINATION bin)
 
@@ -91,6 +90,8 @@ set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
 set(CPACK_PACKAGE_CONTACT lismut@gmail.com)
 
 include(CPack)
+
+enable_testing()
 
 add_test(test_version test_version)
 add_test(test_version_g test_version_g)
