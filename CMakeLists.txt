@@ -43,9 +43,9 @@ target_link_libraries(test_version
 )
 
 target_link_libraries(test_version_g
-    gtest 
+    googletest 
     ${CMAKE_THREAD_LIBS_INIT}
-    iptask.lib gtest_main
+    iptask.lib googletest_main
 )
 
 if (MSVC)
