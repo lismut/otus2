@@ -12,7 +12,7 @@ find_package (Threads REQUIRED)
 configure_file(version.h.in "${CMAKE_CURRENT_SOURCE_DIR}/version.h")
 
 add_subdirectory(
-       "${CMAKE_CURRENT_SOURCE_DIR}/gtest"
+       "${CMAKE_CURRENT_SOURCE_DIR}/googletest"
        gtest
 )
 
