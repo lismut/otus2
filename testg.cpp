@@ -1,4 +1,4 @@
-#include <gtest/gtest.h>
+#include <googletest/gtest.h>
 #include "lib.h"
 
 TEST(GOOGLE_TEST1, test2)
