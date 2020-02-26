@@ -11,15 +11,15 @@ find_package (Threads REQUIRED)
 
 configure_file(version.h.in "${CMAKE_CURRENT_SOURCE_DIR}/version.h")
 
-#add_subdirectory(
-#       "${CMAKE_CURRENT_SOURCE_DIR}/googletest"
-#       googletest
-#)
+add_subdirectory(
+       "${CMAKE_CURRENT_SOURCE_DIR}/googletest"
+       googletest
+)
 
 add_executable(iptask main.cpp)
 add_library(iptask.lib lib.cpp)
 add_executable(test_version testboost.cpp)
-#add_executable(test_version_g testg.cpp)
+add_executable(test_version_g testg.cpp)
 
 set_target_properties(iptask  iptask.lib test_version test_version_g PROPERTIES
     CXX_STANDARD 14
@@ -94,4 +94,4 @@ include(CPack)
 enable_testing()
 
 add_test(test_version test_version)
-#add_test(test_version_g test_version_g)
+add_test(test_version_g test_version_g)
