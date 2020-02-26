@@ -47,10 +47,12 @@ int main()
 		addresses.push_back(ip);
 	}
 	sort(addresses.begin(), addresses.end(), [](const auto& a, const auto& b) {
-        return a > b;
-    });
-	conditionalOutput(addresses, []([[maybe_unused]]const CIp& ip)->bool {
-		if (get<0>(ip) == 1) return true;
+		return a > b;
+    	});
+	for_each(addresses.begin(), addresses.end(), [](const CIp& ip) {
+		PrintIP(ip);
+	});
+	conditionalOutput(addresses, []()->bool {
 		return true;
 	});
 	conditionalOutput(addresses, [](const CIp& ip) {
