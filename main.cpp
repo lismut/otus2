@@ -52,9 +52,6 @@ int main()
 	for_each(addresses.begin(), addresses.end(), [](const CIp& ip) {
 		PrintIP(ip);
 	});
-	conditionalOutput(addresses, []()->bool {
-		return true;
-	});
 	conditionalOutput(addresses, [](const CIp& ip) {
 		if (get<0>(ip) == 1) return true;
 		else return false;
