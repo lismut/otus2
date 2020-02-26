@@ -21,7 +21,7 @@ add_library(iptask.lib lib.cpp)
 add_executable(test_version testboost.cpp)
 add_executable(test_version_g testg.cpp)
 
-set_target_properties(iptask  iptask.lib test_version test_version_g PROPERTIES
+set_target_properties(iptask  iptask.lib test_version test_version_g gtest PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
