@@ -74,9 +74,6 @@ else ()
     target_compile_options(test_version_g PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
-    target_compile_options(gtest PRIVATE
-        -Wall -Wextra -pedantic -Werror
-    )
 endif()
 
 install(TARGETS iptask RUNTIME DESTINATION bin)
