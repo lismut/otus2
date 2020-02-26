@@ -50,6 +50,7 @@ int main()
         return a > b;
     });
 	conditionalOutput(addresses, []([[maybe_unused]]const CIp& ip)->bool {
+		if (get<0>(ip) == 1) return true;
 		return true;
 	});
 	conditionalOutput(addresses, [](const CIp& ip) {
