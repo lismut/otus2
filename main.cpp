@@ -64,7 +64,5 @@ int main()
 		if (get<0>(ip) == 46 || get<1>(ip) == 46 || get<2>(ip) == 46 || get<3>(ip) == 46) return true;
 		else return false;
 	});
-	int a;
-	cin >> a;
 	return 0;
 }
