@@ -44,7 +44,7 @@ int main()
 	string text1;
 	while (getline(cin, text1)) {
 		CIp ip = parse(text1);
-		addresses.push_back(ip);
+		addresses.emplace_back(std::move(ip));
 	}
 	sort(addresses.begin(), addresses.end(), [](const auto& a, const auto& b) {
 		return a > b;
